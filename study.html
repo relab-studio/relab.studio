@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Study Room — RE/LAB</title>
+<link rel="stylesheet" href="styles.css"></head><body>
+
+<header class="header">
+  <div class="container row">
+    <div class="brand"><a href="index.html" class="brand"><span class="re">RE</span>/<span class="lab">LAB</span></a></div>
+    <nav>
+      <a href="study.html" class="active">Study Room</a>
+      <a href="exams.html" >Mock Exams</a>
+      <a href="prep.html" >Prep Room</a>
+      <a href="checklist.html" >Checklist</a>
+      <a href="index.html#pricing" class="btn small">Free trial</a>
+      <button id="signinBtn" class="btn ghost small">Sign in</button>
+    </nav>
+  </div>
+</header>
+
+<section class="section container">
+  <h2>Study Room</h2>
+  <p class="muted">Click a video. It opens full‑screen in a modal so you stay on this page.</p>
+  <div class="card"><h3>Free videos</h3><ul class="video-list" id="freeVideos"></ul></div>
+  <div class="card"><h3>Subscriber videos <span class="badge">Pro</span></h3><ul class="video-list" id="proVideos"></ul><p class="muted">Unlock with <a href="index.html#pricing">RE/LAB Pro</a>.</p></div>
+</section>
+<div id="playerModal" class="modal">
+  <div class="modal-card">
+    <header><div id="playerTitle"></div><button id="closePlayer" class="close">Close</button></header>
+    <iframe id="ytFrame" src="" allow="autoplay; fullscreen" style="width:100%;height:calc(100% - 42px);border:0" allowfullscreen></iframe>
+  </div>
+</div>
+<script src="shared.js"></script><script>window.PAGE='study';</script></body></html>

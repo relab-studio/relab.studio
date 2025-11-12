@@ -1,177 +1,86 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>RE/LAB — Study • Prep • Mock Exams</title>
-  <meta name="description" content="RE/LAB: distraction-free study rooms, mock real estate exams by state, flashcards, and progress tracking.">
-  <link rel="icon" href="assets/favicon.png">
-  <link rel="stylesheet" href="styles.css" />
-</head>
-<body>
-<header class="site-header">
-  <div class="container">
-    <div class="brand"><span class="re">RE</span>/<span class="lab">LAB</span></div>
+<html lang="en"><head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>RE/LAB — Study • Prep • Mock Exams</title>
+<link rel="icon" href="assets/favicon.png"><link rel="stylesheet" href="styles.css">
+</head><body>
+
+<header class="header">
+  <div class="container row">
+    <div class="brand"><a href="index.html" class="brand"><span class="re">RE</span>/<span class="lab">LAB</span></a></div>
     <nav>
-      <a href="#study">Study Room</a>
-      <a href="#mock">Mock Exams</a>
-      <a href="#prep">Prep Room</a>
-      <a href="#checklist">Checklist</a>
-      <a href="#pricing" class="btn small">Free trial</a>
-      <button id="signinBtn" class="ghost small">Sign in</button>
+      <a href="study.html" >Study Room</a>
+      <a href="exams.html" >Mock Exams</a>
+      <a href="prep.html" >Prep Room</a>
+      <a href="checklist.html" >Checklist</a>
+      <a href="index.html#pricing" class="btn small">Free trial</a>
+      <button id="signinBtn" class="btn ghost small">Sign in</button>
     </nav>
   </div>
 </header>
 
 <section class="hero">
   <div class="container hero-grid">
-    <div class="hero-copy">
-      <h1>Focus like a top agent.</h1>
-      <p>Immersive study rooms, state-tailored mock exams, flashcards, and progress tracking — in one clean workspace.</p>
-      <div class="cta">
-        <a href="#pricing" class="btn">Start free</a>
-        <a href="#tour" class="btn ghost">Take the tour</a>
+    <div>
+      <span class="eyebrow">Focus • Learn • Pass</span>
+      <h1>Study like a pro agent.</h1>
+      <p>Pomodoro study rooms, 50‑state mock exams with explanations, flashcards, and progress tracking — in one sleek workspace.</p>
+      <div class="row">
+        <a href="study.html" class="btn">Enter study room</a>
+        <a href="exams.html" class="btn ghost">Try a free quiz</a>
       </div>
-      <div class="trust">
-        <small>Loved by ambitious agents &amp; exam takers.</small>
-      </div>
-    </div>
-    <div class="hero-media">
-      <div class="carousel" id="heroCarousel">
-      </div>
-    </div>
-  </div>
-</section>
-
-<section id="tour" class="features container">
-  <div class="feature">
-    <h3>Distraction‑free study rooms</h3>
-    <p>Pick a vibe and lock in with Pomodoro timers and ambient videos.</p>
-  </div>
-  <div class="feature">
-    <h3>Mock exams by state</h3>
-    <p>Choose GA (today) — more states coming. Free 10‑question quiz; subscribers get full 50‑Q exams.</p>
-  </div>
-  <div class="feature">
-    <h3>Flashcards + progress</h3>
-    <p>Flip key terms, track streaks, and see your gains over time.</p>
-  </div>
-</section>
-
-<section id="study" class="container card">
-  <h2>Study Room</h2>
-  <div class="study-grid">
-    <div class="study-col">
-      <h4>Free videos</h4>
-      <ul id="freeVideos"></ul>
-    </div>
-    <div class="study-col">
-      <h4>Subscriber videos <span class="lock">🔒</span></h4>
-      <ul id="proVideos" class="locked"></ul>
-      <p class="hint">Unlock with <a href="#pricing">RE/LAB Pro</a>.</p>
-    </div>
-  </div>
-</section>
-
-<section id="mock" class="container card">
-  <h2>Mock Exams</h2>
-  <div class="row">
-    <label for="stateSel"><strong>State:</strong></label>
-    <select id="stateSel">
-      <option value="GA">Georgia (GA)</option>
-    </select>
-    <label for="modeSel"><strong>Mode:</strong></label>
-    <select id="modeSel">
-      <option value="quiz10">Free Quiz (10Q)</option>
-      <option value="exam50">Full Exam (50Q) — <span>Pro</span></option>
-    </select>
-    <button id="startBtn" class="btn">Start</button>
-  </div>
-  <div id="qaMount"></div>
-</section>
-
-<section id="prep" class="container card">
-  <h2>Prep Room</h2>
-  <p class="muted">This free section covers quick-start guides, forms, and videos. Pro members see extended modules and downloadable templates.</p>
-  <ul class="bullets">
-    <li>Buyer flow overview</li>
-    <li>Top 10 contract clauses to master</li>
-    <li>Showing etiquette checklist</li>
-  </ul>
-</section>
-
-<section id="flashcards" class="container card">
-  <h2>Flashcards</h2>
-  <div id="flashMount" class="flash"></div>
-  <div class="row">
-    <button id="prevCard" class="ghost">◀</button>
-    <button id="flipCard" class="btn">Flip</button>
-    <button id="nextCard" class="ghost">▶</button>
-  </div>
-</section>
-
-<section id="checklist" class="container card">
-  <h2>Daily Checklist</h2>
-  <ul id="todoList" class="todo"></ul>
-</section>
-
-<section id="pricing" class="pricing">
-  <div class="container">
-    <h2>Simple pricing</h2>
-    <div class="pricing-grid">
-      <div class="plan">
-        <h3>Free</h3>
-        <ul>
-          <li>Study room (free videos)</li>
-          <li>10‑question state quiz</li>
-          <li>Basic flashcards</li>
-          <li>Local progress tracking</li>
-        </ul>
-        <a href="#study" class="btn ghost">Use free</a>
-      </div>
-      <div class="plan highlight">
-        <h3>RE/LAB Pro</h3>
-        <ul>
-          <li>Subscriber study videos</li>
-          <li>Full 50‑Q mock exams</li>
-          <li>Expanded prep room</li>
-          <li>Premium flashcards sets</li>
-        </ul>
-        <a id="buyBtn" class="btn">Start 7‑day free trial</a>
-        <small>Payments handled securely via Stripe Checkout.</small>
+      <div class="kpis">
+        <div class="card"><strong>25/5</strong><div class="muted">Pomodoro</div></div>
+        <div class="card"><strong>50 states</strong><div class="muted">Exam scaffold</div></div>
+        <div class="card"><strong>Progress</strong><div class="muted">Saved locally</div></div>
       </div>
     </div>
-    <div class="testimonials">
-      <blockquote>“Clean, focused, and simple. I finally study without chaos.”</blockquote>
-      <blockquote>“The GA mock exam felt like the real thing.”</blockquote>
+    <div>
+      <div class="band"><img src="assets/057611CD-15AD-4C3C-87F9-5AA6B842574A.jpeg" alt="study" class="round"></div>
+      <div class="row" style="margin-top:10px">
+        <img src="assets/843A0CD6-293D-4B49-8F7A-6B912E265861.jpeg" class="round" style="width:48%">
+        <img src="assets/48CE357B-41D5-43C0-B9F0-11E66B478A39.jpeg" class="round" style="width:48%">
+      </div>
     </div>
   </div>
 </section>
 
-<footer class="site-footer">
-  <div class="container">
-    <div class="brand"><span class="re">RE</span>/<span class="lab">LAB</span></div>
-    <small>© <span id="year"></span> RE/LAB. All rights reserved.</small>
-  </div>
-</footer>
+<section class="section container grid-3">
+  <div class="card"><h3>Distraction‑free study rooms</h3><p>Click a video to open in a full‑screen modal — you stay on the page.</p></div>
+  <div class="card"><h3>Mock exams by state</h3><p>All 50 states in the dropdown. Free 10‑Q quiz; 50‑Q exams for Pro with explanations and review.</p></div>
+  <div class="card"><h3>Prep hub</h3><p>Short, practical how‑to articles — like a mini‑university.</p></div>
+</section>
 
-<!-- Sign-in modal (placeholder until Stripe auth) -->
-<div id="authModal" class="modal hidden">
+<section id="pricing" class="section container card">
+  <h2>Simple pricing</h2>
+  <div class="grid-3">
+    <div class="card">
+      <h3>Free</h3>
+      <ul><li>3 free videos</li><li>10‑Q quiz (any state)</li><li>Basic flashcards</li></ul>
+      <a href="exams.html" class="btn ghost">Try a quiz</a>
+    </div>
+    <div class="card">
+      <h3>RE/LAB Pro</h3>
+      <ul><li>Full 50‑Q exams + explanations</li><li>Subscriber videos</li><li>Expanded Prep hub</li></ul>
+      <a id="buyBtn" class="btn">Start 7‑day free trial</a>
+      <small class="muted">Secure Stripe checkout (to wire).</small>
+    </div>
+    <div class="card">
+      <h3>Members</h3><p class="muted">Have an account?</p>
+      <button id="signinFromPricing" class="btn ghost">Sign in</button>
+    </div>
+  </div>
+</section>
+
+<footer class="footer"><div class="container row"><div class="brand"><span class="re">RE</span>/<span class="lab">LAB</span></div><small class="muted">© <span id="year"></span> RE/LAB</small></div></footer>
+
+<div id="authModal" class="modal">
   <div class="modal-card">
-    <h3>Sign in</h3>
-    <p>Temporary access for dev/testing. Enter access key:</p>
-    <input id="accessKey" placeholder="Enter access key" />
-    <div class="row">
-      <button id="closeAuth" class="ghost">Cancel</button>
-      <button id="enterAuth" class="btn">Enter</button>
-    </div>
-    <small class="muted">We’ll replace this with Stripe + OAuth.</small>
+    <header><strong>&nbsp;Sign in / Create account</strong><button id="closeAuth" class="close">Close</button></header>
+    <iframe id="authFrame" srcdoc="<style>body{margin:0;background:#0b0f18;color:#eaf1ff;font:16px system-ui}input,button{padding:10px;border-radius:10px;border:1px solid #23324a;background:#0f1626;color:#eaf1ff}.wrap{display:grid;place-items:center;height:100vh}.card{padding:20px;border:1px solid #23324a;border-radius:12px;background:#0c1220;width:min(420px,92vw)}small{color:#9aa4b8}</style><div class='wrap'><div class='card'><h3>Enter your email</h3><p><small>We will connect Firebase Auth + Stripe in the next step.</small></p><input id='em' placeholder='you@example.com' style='width:100%'><div style='height:10px'></div><button onclick='parent.postMessage({type:&quot;saveEmail&quot;, email:document.getElementById(&quot;em&quot;).value}, &quot;*&quot; )' style='width:100%'>Continue</button></div></div>" style="width:100%;height:100%;border:0"></iframe>
   </div>
 </div>
 
-<script>
-  window.HERO_IMAGES = ["E309FABC-E3C1-48C4-8E32-693913E1146A.jpeg", "057611CD-15AD-4C3C-87F9-5AA6B842574A.jpeg", "843A0CD6-293D-4B49-8F7A-6B912E265861.jpeg", "48CE357B-41D5-43C0-B9F0-11E66B478A39.jpeg", "4E344D2A-9464-417E-9E35-C0FFE71FA2B1.jpeg", "36DBBBE0-9220-416E-8D54-9BBA0256884B.jpeg"];
-</script>
-<script src="app.js"></script>
-</body>
-</html>
+<script src="shared.js"></script>
+<script>window.PAGE='home';</script>
+</body></html>

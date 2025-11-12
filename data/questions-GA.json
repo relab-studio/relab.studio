@@ -1,0 +1,35 @@
+[
+  {
+    "q": "What Georgia law governs broker\u2011client relationships and required disclosures?",
+    "choices": [
+      "RESPA",
+      "BRRETA",
+      "TILA",
+      "UDAP"
+    ],
+    "a": 1,
+    "expl": "BRRETA governs duties and disclosures for GA brokerages."
+  },
+  {
+    "q": "Who typically holds earnest money in Georgia?",
+    "choices": [
+      "Listing broker",
+      "Buyer\u2019s broker",
+      "Seller",
+      "Title company"
+    ],
+    "a": 0,
+    "expl": "Customarily the listing broker holds EM unless contract specifies otherwise."
+  },
+  {
+    "q": "Which deed is most commonly used for transfers in Georgia?",
+    "choices": [
+      "Quitclaim",
+      "General warranty",
+      "Special warranty",
+      "Bargain & sale"
+    ],
+    "a": 2,
+    "expl": "Special warranty deed is common in GA."
+  }
+]

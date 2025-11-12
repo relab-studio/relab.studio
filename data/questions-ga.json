@@ -1,0 +1,102 @@
+[
+  {
+    "q": "In Georgia, how long is the standard exclusive buyer brokerage agreement term by default?",
+    "choices": [
+      "6 months",
+      "1 year",
+      "3 months",
+      "90 days"
+    ],
+    "a": 0
+  },
+  {
+    "q": "Which Georgia form discloses known material facts about a property?",
+    "choices": [
+      "GAR F301",
+      "GAR F101",
+      "GAR F401",
+      "GAR F201"
+    ],
+    "a": 0
+  },
+  {
+    "q": "Who holds the earnest money by default in GA?",
+    "choices": [
+      "Seller",
+      "Listing broker",
+      "Closing attorney",
+      "Buyer\u2019s broker"
+    ],
+    "a": 1
+  },
+  {
+    "q": "What is the minimum age to obtain a GA salesperson license?",
+    "choices": [
+      "18",
+      "19",
+      "20",
+      "21"
+    ],
+    "a": 1
+  },
+  {
+    "q": "What GA law requires brokerage agreements to have a definite termination date?",
+    "choices": [
+      "BRRETA",
+      "RESPA",
+      "TILA",
+      "GLBA"
+    ],
+    "a": 0
+  },
+  {
+    "q": "How many hours of post-license must a new GA salesperson complete within the first year?",
+    "choices": [
+      "36",
+      "25",
+      "30",
+      "45"
+    ],
+    "a": 1
+  },
+  {
+    "q": "In GA closings, who typically prepares the deed?",
+    "choices": [
+      "Listing agent",
+      "Buyer\u2019s agent",
+      "Closing attorney",
+      "Title company only"
+    ],
+    "a": 2
+  },
+  {
+    "q": "Which lien has priority in GA regardless of recording date?",
+    "choices": [
+      "IRS lien",
+      "Mechanic\u2019s lien",
+      "Property tax lien",
+      "Mortgage lien"
+    ],
+    "a": 2
+  },
+  {
+    "q": "What deed is most commonly used to transfer property in Georgia?",
+    "choices": [
+      "Quitclaim deed",
+      "General warranty deed",
+      "Special warranty deed",
+      "Bargain and sale deed"
+    ],
+    "a": 2
+  },
+  {
+    "q": "In GA, real property taxes are based on what assessed value percentage?",
+    "choices": [
+      "40%",
+      "50%",
+      "100%",
+      "25%"
+    ],
+    "a": 0
+  }
+]

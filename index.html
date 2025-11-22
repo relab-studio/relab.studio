@@ -1,0 +1,207 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>RE/LAB – Where New Agents Learn, Prepare & Pass</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="main.js"></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="logo">
+        <span class="logo-mark">RE/</span><span class="logo-text">LAB</span>
+      </div>
+      <nav class="main-nav">
+        <a href="index.html" class="active">Home</a>
+        <a href="#study-room">Study Room</a>
+        <a href="prep-room.html">Prep Room</a>
+        <a href="#mock-exams">Mock Exams</a>
+        <a href="#checklist">Checklist</a>
+      </nav>
+      <div class="header-actions">
+        <button class="btn-link" id="loginBtn">Log in</button>
+        <button class="btn-primary" id="joinBtn">Start 7-Day Free Trial</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-bg"></div>
+    <div class="container hero-inner">
+      <div class="hero-copy">
+        <p class="hero-tag">Study Studio for New Agents</p>
+        <h1>Where New Agents Learn, Prepare &amp; Pass.</h1>
+        <p class="hero-sub">
+          RE/LAB gives you focused study rooms, mock exams, and checklists so you can move from
+          “I hope I pass” to “I know I’ve got this.”
+        </p>
+        <div class="hero-actions">
+          <button class="btn-primary" id="heroTrialBtn">Start 7-Day Free Trial</button>
+          <button class="btn-ghost" id="heroTourBtn">Take a quick tour</button>
+        </div>
+        <p class="hero-note">
+          7 days free · then just $4.99/month · cancel anytime
+        </p>
+      </div>
+      <div class="hero-image-card">
+        <img src="images/hero-new-agent.jpg" alt="New agent studying at a café" />
+        <div class="hero-image-overlay">
+          <p class="overlay-label">Live Study Session</p>
+          <p class="overlay-text">“Contracts &amp; Closings” · 42 mins</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- THREE FEATURE CARDS -->
+  <section class="feature-cards" id="study-room">
+    <div class="container">
+      <h2>Your agent prep, in three rooms.</h2>
+      <p class="section-sub">
+        Move through each space like a real office: focused study time, practice exams, and a
+        checklist that keeps you on track.
+      </p>
+
+      <div class="card-grid">
+        <article class="feature-card">
+          <div class="card-icon">📚</div>
+          <h3>Study Room</h3>
+          <p>
+            Quiet, structured space inspired by Lifeat.io – Pomodoro timers, playlists, and
+            concept breakdowns for the national exam.
+          </p>
+          <button class="btn-text">Enter Study Room</button>
+        </article>
+
+        <article class="feature-card">
+          <div class="card-icon">📝</div>
+          <h3>Mock Exam Room</h3>
+          <p>
+            10-question warm-ups for free, 50-question state-specific exams for members. See your
+            score, weak spots, and explanations instantly.
+          </p>
+          <button class="btn-text" onclick="scrollToSection('mock-exams')">
+            View Mock Exams
+          </button>
+        </article>
+
+        <article class="feature-card">
+          <div class="card-icon">✅</div>
+          <h3>Prep Room &amp; Checklists</h3>
+          <p>
+            Articles, flashcards, and a private checklist so you always know what to study next –
+            from vocab to real-world contracts.
+          </p>
+          <a href="prep-room.html" class="btn-text">Open Prep Room</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRICING / SUBSCRIPTION -->
+  <section class="pricing" id="mock-exams">
+    <div class="container pricing-inner">
+      <div class="pricing-copy">
+        <h2>Try RE/LAB free for 7 days.</h2>
+        <p class="section-sub">
+          Get full access to the Study Room, flashcards, and 50-question state exams. Keep going
+          for less than the price of one coffee a month.
+        </p>
+
+        <div class="pricing-card">
+          <p class="pricing-label">RE/LAB Membership</p>
+          <p class="pricing-price">$4.99<span>/month</span></p>
+          <ul class="pricing-list">
+            <li>✔ 7-day free trial</li>
+            <li>✔ Unlimited 50-question exams for all 50 states</li>
+            <li>✔ Full flashcard deck (national + state concepts)</li>
+            <li>✔ Saved scores &amp; progress tracking</li>
+            <li>✔ Access to future tools and rooms</li>
+          </ul>
+          <button class="btn-primary wide">Start Free Trial</button>
+          <p class="pricing-note">
+            No long-term contract. Cancel any time inside your account.
+          </p>
+        </div>
+      </div>
+
+      <!-- Mock exam teaser box -->
+      <div class="exam-preview-card">
+        <h3>Mock Exam Preview</h3>
+        <label class="field">
+          <span>Choose your state</span>
+          <select id="stateSelect">
+            <!-- main.js will fill in all 50 states -->
+          </select>
+        </label>
+        <button class="btn-secondary" id="startFreeQuizBtn">
+          Take 10-Question Free Quiz
+        </button>
+        <button class="btn-ghost small" id="startMemberQuizBtn">
+          Unlock 50-Question Member Exam
+        </button>
+        <p class="tiny-note">
+          Member exams are locked until you start your free trial and connect Stripe.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CHECKLIST PREVIEW -->
+  <section class="checklist-preview" id="checklist">
+    <div class="container">
+      <h2>Stay on track with the New Agent Checklist.</h2>
+      <p class="section-sub">
+        From “sign up for your exam” to “submit your first offer,” keep everything in one place.
+      </p>
+
+      <div class="card-grid two-col">
+        <article class="checklist-card">
+          <h3>Today’s Focus</h3>
+          <ul class="checklist-list">
+            <li><input type="checkbox" /> Review agency relationships</li>
+            <li><input type="checkbox" /> Finish 10-question national warm-up</li>
+            <li><input type="checkbox" /> Read 1 Prep Room article</li>
+          </ul>
+        </article>
+        <article class="checklist-card">
+          <h3>Coming Up</h3>
+          <ul class="checklist-list">
+            <li><input type="checkbox" /> Schedule full-length practice exam</li>
+            <li><input type="checkbox" /> Add 5 new flashcards</li>
+            <li><input type="checkbox" /> Update your “Passed Topics” list</li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- EMAIL CAPTURE / LOGIN -->
+  <section class="cta-strip">
+    <div class="container cta-inner">
+      <div>
+        <h2>Get your welcome link to RE/LAB.</h2>
+        <p class="section-sub">
+          Drop your name and email so we can save your progress and send your login.
+        </p>
+      </div>
+      <form class="inline-form" id="signupForm">
+        <input type="text" id="signupName" placeholder="First name" required />
+        <input type="email" id="signupEmail" placeholder="Email address" required />
+        <button class="btn-primary" type="submit">Create my account</button>
+      </form>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>&copy; <span id="year"></span> RE/LAB. All rights reserved.</p>
+      <p class="footer-note">Membership billing will be powered by Stripe.</p>
+    </div>
+  </footer>
+</body>
+</html>
